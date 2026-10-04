@@ -140,22 +140,13 @@ export const MindLoomLanding: React.FC = () => {
             <a href="#themes" className="hover:text-white transition-colors">05//themes</a>
           </nav>
 
-          {/* External Links */}
+          {/* Actions */}
           <div className="flex items-center gap-3">
-            <a
-              href="https://github.com/tufanunal/mindloom"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-md font-mono text-xs text-[#8B9BB0] border border-white/10 hover:border-white/20 hover:text-white transition-all"
-            >
-              <span>src:github</span>
-            </a>
             <a
               href="https://app.mindloom.me"
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md font-sans text-xs font-semibold bg-[#5AA7D9] text-[#0A0D12] hover:bg-[#6FB5E3] transition-colors"
             >
               <span>Open Vault</span>
-              <span className="font-mono text-[10px] opacity-75">(:8091)</span>
             </a>
           </div>
         </div>
@@ -547,7 +538,7 @@ export const MindLoomLanding: React.FC = () => {
               </div>
               <div className="pt-4 flex items-center justify-between font-mono text-[11px] text-[#576577] border-t border-white/[0.06]">
                 <span>cloudflared::zero_trust_tunnel</span>
-                <span className="text-[#5AA7D9]">Ports 8090 (Landing) // 8091 (Web) // 3011 (API)</span>
+                <span className="text-[#5AA7D9]">edge::outbound_only</span>
               </div>
             </div>
           </div>
@@ -795,9 +786,9 @@ export const MindLoomLanding: React.FC = () => {
       {/* ─────────────────────────────────────────────────────────────
           8. FOOTER
           ───────────────────────────────────────────────────────────── */}
-      <footer className="py-16 bg-[#080A0E]">
+      <footer className="py-14 bg-[#080A0E]">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-12 border-b border-white/[0.06]">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-8 border-b border-white/[0.06]">
             <div>
               <div className="flex items-center gap-3">
                 <WovenHashtagIcon size={24} className="text-[#5AA7D9]" />
@@ -812,34 +803,18 @@ export const MindLoomLanding: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-8 font-mono text-xs text-[#8B9BB0]">
-              <div>
-                <div className="text-white font-semibold mb-2">Instance</div>
-                <ul className="space-y-1">
-                  <li><a href="https://app.mindloom.me" className="hover:text-[#5AA7D9] transition-colors">app.mindloom.me</a></li>
-                  <li><a href="https://mindloom.me" className="hover:text-[#5AA7D9] transition-colors">mindloom.me</a></li>
-                </ul>
-              </div>
-              <div>
-                <div className="text-white font-semibold mb-2">Repositories</div>
-                <ul className="space-y-1">
-                  <li><a href="https://github.com/tufanunal/mindloom" target="_blank" rel="noopener noreferrer" className="hover:text-[#5AA7D9] transition-colors">tufanunal/mindloom</a></li>
-                  <li><a href="https://github.com/tufanunal/mindloom-landing" target="_blank" rel="noopener noreferrer" className="hover:text-[#5AA7D9] transition-colors">tufanunal/mindloom-landing</a></li>
-                </ul>
-              </div>
-              <div>
-                <div className="text-white font-semibold mb-2">Endpoints</div>
-                <ul className="space-y-1">
-                  <li><span className="text-[#576577]">API: :3011</span></li>
-                  <li><span className="text-[#576577]">Landing: :8090</span></li>
-                  <li><span className="text-[#576577]">Dashboard: :8091</span></li>
-                </ul>
-              </div>
+            <div className="flex items-center gap-6 font-mono text-xs">
+              <a href="https://app.mindloom.me" className="text-[#8B9BB0] hover:text-[#5AA7D9] transition-colors">
+                app.mindloom.me
+              </a>
+              <a href="https://mindloom.me" className="text-[#8B9BB0] hover:text-[#5AA7D9] transition-colors">
+                mindloom.me
+              </a>
             </div>
           </div>
 
-          <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#576577] font-mono gap-4">
-            <div>mindloom.me // 2026 // MIT License</div>
+          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#576577] font-mono gap-4">
+            <div>mindloom.me</div>
             <div>Plain text is sovereign.</div>
           </div>
         </div>
