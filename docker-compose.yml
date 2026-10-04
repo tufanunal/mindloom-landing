@@ -5,12 +5,6 @@ services:
     restart: unless-stopped
     ports:
       - "8090:8090"
-    security_opt:
-      - no-new-privileges:true
-    cap_drop:
-      - ALL
-      - SETUID
-      - SETGID
     healthcheck:
       test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8090/health"]
       interval: 30s
