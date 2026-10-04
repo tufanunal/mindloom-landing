@@ -18,7 +18,7 @@ const THEMES: ThemePreview[] = [
   // 4 Functional Modes
   {
     id: 'dark',
-    name: 'Dark Obsidian',
+    name: 'Dark Slate',
     category: 'functional',
     bg: '#0A0D12',
     surface: '#11151D',
@@ -162,35 +162,35 @@ export const MindLoomLanding: React.FC = () => {
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-white/10 bg-[#11151D] font-mono text-xs text-[#8B9BB0]">
                 <span className="w-2 h-2 rounded-full bg-[#5AA7D9]"></span>
-                <span>self_hosted // single_operator // markdown_native</span>
+                <span>self_hosted // postgresql_powered // relational_knowledge_engine</span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-[1.12]">
-                Personal knowledge engine where{' '}
-                <span className="text-[#5AA7D9]">plain .md files</span> are the database.
+                Personal knowledge engine powered by{' '}
+                <span className="text-[#5AA7D9]">PostgreSQL & relational Markdown</span>.
               </h1>
 
               <p className="text-base text-[#8B9BB0] leading-relaxed max-w-xl">
-                One capture endpoint takes links, audio, screenshots, and raw thoughts. 
-                An asynchronous pipeline parses, transcribes, OCRs, tags, and links each 
-                item into your knowledge graph as a plain text file with YAML frontmatter. 
-                Postgres holds only a disposable index.
+                One capture endpoint ingests links, audio, screenshots, and thoughts. 
+                An asynchronous pipeline transcribes with Whisper, extracts document OCR, 
+                generates vector embeddings, and builds a normalized relational knowledge graph 
+                with sub-millisecond query performance.
               </p>
 
               {/* Direct Proof Chips */}
               <div className="grid grid-cols-2 gap-3 pt-2 max-w-md font-mono text-xs">
                 <div className="p-3 rounded-lg bg-[#11151D] border border-white/[0.08]">
                   <div className="text-[#5AA7D9] font-medium">&lt; 500ms</div>
-                  <div className="text-[#576577] text-[11px] mt-0.5">Non-blocking capture latency</div>
+                  <div className="text-[#576577] text-[11px] mt-0.5">Non-blocking ingest response</div>
                 </div>
                 <div className="p-3 rounded-lg bg-[#11151D] border border-white/[0.08]">
-                  <div className="text-[#5AA7D9] font-medium">0 Lock-in</div>
-                  <div className="text-[#576577] text-[11px] mt-0.5">Drop folder into Obsidian</div>
+                  <div className="text-[#5AA7D9] font-medium">1NF Relational</div>
+                  <div className="text-[#576577] text-[11px] mt-0.5">Normalized PostgreSQL schema</div>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Hero Visual — Real Canonical Markdown Frontmatter */}
+            {/* Right Column: Hero Visual — Real Normalized Note Record */}
             <div className="lg:col-span-6">
               <div className="rounded-xl border border-white/10 bg-[#0E1219] overflow-hidden shadow-2xl">
                 {/* Terminal Header */}
@@ -199,39 +199,42 @@ export const MindLoomLanding: React.FC = () => {
                     <div className="w-2.5 h-2.5 rounded-full bg-[#262C38]"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-[#262C38]"></div>
                     <div className="w-2.5 h-2.5 rounded-full bg-[#262C38]"></div>
-                    <span className="ml-2 text-[#8B9BB0]">vault/notes/2026-10-04_distributed-mesh.md</span>
+                    <span className="ml-2 text-[#8B9BB0]">postgres::lakebase / notes / record_01HZY8X9K2MQ4NVB9F7G8</span>
                   </div>
-                  <span>UTF-8</span>
+                  <span>1NF JSONB</span>
                 </div>
 
                 {/* File Contents */}
                 <div className="p-5 font-mono text-xs leading-relaxed text-[#ABB2BF] overflow-x-auto space-y-1">
                   <div className="text-[#576577]">---</div>
                   <div><span className="text-[#E06C75]">id</span>: <span className="text-[#98C379]">"01HZY8X9K2MQ4NVB9F7G8"</span></div>
-                  <div><span className="text-[#E06C75]">title</span>: <span className="text-[#98C379]">"Distributed Knowledge Meshes & Local-First Storage"</span></div>
+                  <div><span className="text-[#E06C75]">title</span>: <span className="text-[#98C379]">"Distributed Knowledge Meshes & Relational Architecture"</span></div>
                   <div><span className="text-[#E06C75]">created_at</span>: <span className="text-[#61AFEF]">2026-10-04T19:42:00Z</span></div>
                   <div><span className="text-[#E06C75]">source_url</span>: <span className="text-[#98C379]">"https://research.org/distributed-systems"</span></div>
                   <div><span className="text-[#E06C75]">container</span>: <span className="text-[#D19A66]">"Systems Architecture"</span></div>
-                  <div><span className="text-[#E06C75]">bin</span>: <span className="text-[#D19A66]">"Drafting v2 Engine Spec"</span></div>
+                  <div><span className="text-[#E06C75]">bin</span>: <span className="text-[#D19A66]">"Drafting Engine Spec v2"</span></div>
                   <div><span className="text-[#E06C75]">tags</span>:</div>
                   <div className="pl-4 text-[#98C379]">- <span className="text-[#5AA7D9]">#architecture</span></div>
-                  <div className="pl-4 text-[#98C379]">- <span className="text-[#5AA7D9]">#local-first</span></div>
-                  <div className="pl-4 text-[#98C379]">- <span className="text-[#5AA7D9]">#crdt</span></div>
+                  <div className="pl-4 text-[#98C379]">- <span className="text-[#5AA7D9]">#postgresql</span></div>
+                  <div className="pl-4 text-[#98C379]">- <span className="text-[#5AA7D9]">#knowledge-graph</span></div>
+                  <div><span className="text-[#E06C75]">traces</span>:</div>
+                  <div className="pl-4 text-[#98C379]">- <span className="text-[#61AFEF]">"database-migration"</span></div>
+                  <div className="pl-4 text-[#98C379]">- <span className="text-[#61AFEF]">"1nf-normalization"</span></div>
                   <div><span className="text-[#E06C75]">enrichment</span>:</div>
-                  <div className="pl-4"><span className="text-[#E06C75]">whisper_model</span>: <span className="text-[#98C379]">"large-v3"</span></div>
-                  <div className="pl-4"><span className="text-[#E06C75]">classifier</span>: <span className="text-[#98C379]">"nvidia/llama-3.3-70b-instruct"</span></div>
+                  <div className="pl-4"><span className="text-[#E06C75]">whisper_model</span>: <span className="text-[#98C379]">"whisper-large-v3"</span></div>
+                  <div className="pl-4"><span className="text-[#E06C75]">classifier</span>: <span className="text-[#98C379]">"meta/llama-3.3-70b-instruct"</span></div>
                   <div className="pl-4"><span className="text-[#E06C75]">ocr_engine</span>: <span className="text-[#98C379]">"docling-v2"</span></div>
                   <div className="text-[#576577]">---</div>
                   <div className="pt-2 text-white font-sans text-sm font-semibold">
-                    # Distributed Knowledge Meshes & Local-First Storage
+                    # Distributed Knowledge Meshes & Relational Architecture
                   </div>
                   <p className="pt-1 text-[#8B9BB0] font-sans text-xs">
-                    Local-first topologies guarantee availability regardless of edge connectivity. 
-                    Referenced in [[2026-09-15_vault-invariants]] and [[Obsidian Specification]].
+                    Normalized relational tables guarantee structural consistency across tags and containers. 
+                    Linked directly in [[Graph Relational Model]] and [[Schema Normalization]].
                   </p>
                   <div className="pt-2 font-mono text-[11px] text-[#5AA7D9] flex gap-2">
-                    <span className="px-1.5 py-0.5 rounded bg-[#5AA7D9]/10 border border-[#5AA7D9]/20">[[2026-09-15_vault-invariants]]</span>
-                    <span className="px-1.5 py-0.5 rounded bg-[#5AA7D9]/10 border border-[#5AA7D9]/20">[[Obsidian Specification]]</span>
+                    <span className="px-1.5 py-0.5 rounded bg-[#5AA7D9]/10 border border-[#5AA7D9]/20">[[Graph Relational Model]]</span>
+                    <span className="px-1.5 py-0.5 rounded bg-[#5AA7D9]/10 border border-[#5AA7D9]/20">[[Schema Normalization]]</span>
                   </div>
                 </div>
               </div>
@@ -257,16 +260,15 @@ export const MindLoomLanding: React.FC = () => {
               <div>
                 <span className="font-mono text-xs text-[#5AA7D9] font-medium">RULE // 01</span>
                 <h3 className="text-base font-bold text-white mt-2 mb-3">
-                  Markdown is source of truth
+                  Normalized Relational Core
                 </h3>
                 <p className="text-sm text-[#8B9BB0] leading-relaxed">
-                  The database is derived and completely disposable. Delete PostgreSQL, run 
-                  <code className="mx-1 px-1.5 py-0.5 rounded bg-black/40 font-mono text-xs text-[#5AA7D9]">pnpm reindex</code>, 
-                  and the relational index rebuilds entirely from the filesystem.
+                  All notes, tags, traces, and graph relations adhere to First Normal Form (1NF) in PostgreSQL. 
+                  Lookup tables and composite foreign keys ensure integrity, fast filtering, and zero redundancy.
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-white/[0.06] font-mono text-xs text-[#576577]">
-                fs::canonical_storage
+                db::postgres_normalized_1nf
               </div>
             </div>
 
@@ -277,7 +279,7 @@ export const MindLoomLanding: React.FC = () => {
                   Capture never blocks on intelligence
                 </h3>
                 <p className="text-sm text-[#8B9BB0] leading-relaxed">
-                  Share a link or screenshot and receive a 200 OK within 500ms. OCR, transcription, 
+                  Share a link, document, or screenshot and receive a 200 OK within 500ms. OCR, transcription, 
                   tagging, and embeddings execute asynchronously in background worker queues.
                 </p>
               </div>
@@ -298,7 +300,7 @@ export const MindLoomLanding: React.FC = () => {
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-white/[0.06] font-mono text-xs text-[#576577]">
-                crypto::client_age_gcm
+                crypto::client_side_aes256
               </div>
             </div>
 
@@ -322,18 +324,18 @@ export const MindLoomLanding: React.FC = () => {
       </section>
 
       {/* ─────────────────────────────────────────────────────────────
-          4. BENTO GRID (Mixed cell sizes: 2x2 anchors + 1x1 cells)
+          4. CORE ARCHITECTURE
           ───────────────────────────────────────────────────────────── */}
       <section id="bento" className="py-24 border-b border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-14">
-            <span className="font-mono text-xs text-[#5AA7D9] tracking-wider uppercase">02 // Deep Architecture</span>
+            <span className="font-mono text-xs text-[#5AA7D9] tracking-wider uppercase">02 // Core Architecture</span>
             <h2 className="text-3xl font-bold text-white tracking-tight mt-1">
-              Bento Grid: The Core Mechanics
+              Structured Knowledge Engine
             </h2>
             <p className="text-sm text-[#8B9BB0] mt-2 max-w-2xl">
-              Constructed specifically for technical operators managing long-tail knowledge libraries. 
-              Varying functional density across discrete systems.
+              Constructed specifically for technical operators managing long-tail research libraries, 
+              active project deliverables, and multidimensional knowledge graphs.
             </p>
           </div>
 
@@ -595,30 +597,30 @@ export const MindLoomLanding: React.FC = () => {
             <div className="p-6 rounded-xl bg-[#11151D] border border-white/[0.08]">
               <div className="flex items-center justify-between">
                 <h4 className="text-base font-bold text-white">Joplin</h4>
-                <span className="font-mono text-xs text-[#8B9BB0] bg-white/5 px-2 py-0.5 rounded">Encrypted Sync</span>
+                <span className="font-mono text-xs text-[#8B9BB0] bg-white/5 px-2 py-0.5 rounded">Encrypted Notes</span>
               </div>
               <p className="text-xs text-[#8B9BB0] mt-3 leading-relaxed">
-                Joplin provides battle-tested end-to-end encrypted note synchronization across clients. 
-                However, it stores notes inside an internal SQLite database or opaque synchronized bundles, 
-                rather than raw, human-inspectable Obsidian-ready vault directories.
+                Joplin provides reliable cross-platform encrypted note sync. However, it lacks 
+                multidimensional relational graph traversal, container/bin duality, autonomous 
+                transcription workers, and PostgreSQL vector similarity search.
               </p>
               <div className="mt-4 pt-3 border-t border-white/[0.06] font-mono text-[11px] text-[#5AA7D9]">
-                MindLoom adds: Standard age-format encryption, zero-export Obsidian drop-in.
+                MindLoom adds: 3-tier graph edges, project bins, and async AI enrichment pipelines.
               </div>
             </div>
 
             <div className="p-6 rounded-xl bg-[#11151D] border border-white/[0.08]">
               <div className="flex items-center justify-between">
-                <h4 className="text-base font-bold text-white">Obsidian Sync / Commercial PKMS</h4>
+                <h4 className="text-base font-bold text-white">Cloud PKMS (Notion, Roam, Capacities)</h4>
                 <span className="font-mono text-xs text-[#8B9BB0] bg-white/5 px-2 py-0.5 rounded">Commercial SaaS</span>
               </div>
               <p className="text-xs text-[#8B9BB0] mt-3 leading-relaxed">
-                Obsidian is the gold standard for desktop thought work. MindLoom is built to feed Obsidian: 
-                an autonomous headless server that collects clips from mobile and browser, enriches them via AI, 
-                and writes them into your existing Obsidian directory.
+                Commercial cloud tools trap your knowledge in proprietary schemas behind monthly subscriptions 
+                and remote vendor servers. MindLoom runs 100% self-hosted on your own PostgreSQL database 
+                with full relational querying, zero subscription fees, and complete data sovereignty.
               </p>
               <div className="mt-4 pt-3 border-t border-white/[0.06] font-mono text-[11px] text-[#5AA7D9]">
-                MindLoom adds: Autonomous 24/7 background capture and enrichment backend.
+                MindLoom adds: 100% self-hosted PostgreSQL engine, zero subscription lock-in.
               </div>
             </div>
           </div>
@@ -650,7 +652,7 @@ export const MindLoomLanding: React.FC = () => {
               <div className="text-[#576577] text-[10px] uppercase">Job Replayability</div>
               <div className="text-white font-semibold text-sm mt-1">100% Idempotent Runs</div>
               <p className="text-[#8B9BB0] font-sans text-xs mt-2">
-                Re-process entire multi-year note archives on newer frontier model weights with a single CLI command without corrupting links or frontmatter.
+                Re-process note archives on newer frontier model weights with idempotent background jobs without corrupting relationships or schema integrity.
               </p>
             </div>
 
