@@ -123,7 +123,7 @@ export const MindLoomLanding: React.FC = () => {
           {/* Logo Wordmark */}
           <a href="#" className="flex items-center gap-3 group focus:outline-none">
             <div className="w-8 h-8 rounded-lg bg-[#11151D] border border-white/10 flex items-center justify-center p-1 group-hover:border-[#5AA7D9]/40 transition-colors">
-              <WovenHashtagIcon size={22} className="text-[#5AA7D9]" />
+              <img src="/logo_transparent.png" alt="MindLoom Logo" className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
             </div>
             <div className="flex items-baseline tracking-tight">
               <span className="font-sans font-bold text-lg text-white">Mind</span>
